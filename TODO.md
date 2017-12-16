@@ -1,0 +1,4 @@
+- [x] send whatsapp messages through whatsapp web with selenium.
+- [x] use time functions to change the times messages are sent.
+- [ ] have chrome load a profile so that you won't need to reauthenticate whatsapp every time you start the program.
+- [ ] have the script start on computer startup.
