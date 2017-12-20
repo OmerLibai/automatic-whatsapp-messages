@@ -81,10 +81,10 @@ def main(target_time=None, message='22:12', contact=None):
         target_time = prompt_user_for_time()
     wait_until(target_time)
     from time import sleep
-    sleep(10) # difference in time between phone and computer is 8 seconds
+    sleep(10)  # difference in time between phone and computer is 8 seconds
     wait = open_group(driver, contact)
     send_message(wait, message)
-    sleep(10) # to let the message get sent before the program closes.
+    raw_input("press any button to continue...")  # to let the message get sent before the program closes.
 
 if __name__ == '__main__':
     from sys import argv
