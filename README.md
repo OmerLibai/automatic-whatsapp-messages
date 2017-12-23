@@ -10,7 +10,7 @@ this script uses the [selenium](http://www.seleniumhq.org/) module.
 
 ## instructions for use
 
-* In [main.py](https://github.com/OmerLibai/automatic-whatsapp-messages/blob/master/main.py) change message's value (in the main function's declaration) to the message you would like to send.
-* In [main.py](https://github.com/OmerLibai/automatic-whatsapp-messages/blob/master/main.py) change target's value to the name of the group or contact you want to send the message to.
-* In [main.py](https://github.com/OmerLibai/automatic-whatsapp-messages/blob/master/main.py) change bot_message's value to a something you would like to change at the end of every message.
-* In [main.py](https://github.com/OmerLibai/automatic-whatsapp-messages/blob/master/main.py) change COMPUTER_PHONE_DELAY's value to the delay in seconds between your computer's time and your phone's time.
+* In [main.py](https://github.com/OmerLibai/automatic-whatsapp-messages/blob/master/main.py) change _message's_ value (in the main function's declaration) to the message you would like to send.
+* In [main.py](https://github.com/OmerLibai/automatic-whatsapp-messages/blob/master/main.py) change _target's_ value to the name of the group or contact you want to send the message to.
+* In [main.py](https://github.com/OmerLibai/automatic-whatsapp-messages/blob/master/main.py) change _bot_message's_ value to a something you would like to change at the end of every message.
+* In [main.py](https://github.com/OmerLibai/automatic-whatsapp-messages/blob/master/main.py) change _COMPUTER_PHONE_DELAY's_ value to the delay in seconds between your computer's time and your phone's time.
