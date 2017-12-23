@@ -4,7 +4,6 @@
 from time_config import get_time
 from time_config import wait_until
 
-
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
@@ -12,10 +11,16 @@ from selenium.webdriver.common.by import By
 from selenium import webdriver
 
 # Replace 'target' with the name of your contact, group or broadcast group
-target = "self group"
+target = "2212"
 
 # a text that'll be sent at the end of every message
 bot_message = u"_זוהי הודעה אוטומתית שקיבלת מכיוון שאתה ברשימת תפוצה. אם ברצונך לצאת, נא הקש 1_"
+
+# a number that represents the time difference between your computer and phone (in seconds)
+COMPUTER_PHONE_DELAY = 16
+
+# the time in seconds that the program won't throw a timeout exception when it loads the page
+TIMEOUT_IN_SECONDS = 600
 
 
 def open_whatsapp(chrome_driver_path=r'C:\Users\omerl\Desktop\school\tests\chromedriver.exe'):
@@ -38,7 +43,7 @@ def open_group(driver, contact=None):
     """
     if contact is None:
         contact = target
-    wait = WebDriverWait(driver, 600)
+    wait = WebDriverWait(driver, TIMEOUT_IN_SECONDS)
     y_arg = '//*[@id="side"]/div[2]/div/label/input'
     input_y = wait.until(EC.presence_of_element_located((
         By.XPATH, y_arg)))
@@ -81,7 +86,7 @@ def main(target_time=None, message='22:12', contact=None):
         target_time = prompt_user_for_time()
     wait_until(target_time)
     from time import sleep
-    sleep(10)  # difference in time between phone and computer is 8 seconds
+    sleep(COMPUTER_PHONE_DELAY)  # difference in time between phone and computer is 8 seconds
     wait = open_group(driver, contact)
     send_message(wait, message)
     raw_input("press any button to continue...")  # to let the message get sent before the program closes.
