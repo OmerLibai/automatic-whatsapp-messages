@@ -22,6 +22,9 @@ COMPUTER_PHONE_DELAY = 16
 # the time in seconds that the program won't throw a timeout exception when it loads the page
 TIMEOUT_IN_SECONDS = 600
 
+# the default message the send_message function sends
+DEFAULT_MESSAGE = "selenium test, please ignore"
+
 
 def open_whatsapp(chrome_driver_path=r'C:\Users\omerl\Desktop\school\tests\chromedriver.exe'):
     """
@@ -51,7 +54,7 @@ def open_group(driver, contact=None):
     return wait
 
 
-def send_message(wait, message="selenium test, please ignore"):
+def send_message(wait, message=DEFAULT_MESSAGE):
     """
     Sends a message in an open Whatsapp contact/group/broadcast list.
     :param wait: A WebDriverWait object(from selenium). 
