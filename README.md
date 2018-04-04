@@ -16,6 +16,9 @@ this script uses the [selenium](http://www.seleniumhq.org/) module.
 * In [main.py](https://github.com/OmerLibai/automatic-whatsapp-messages/blob/master/main.py) change _COMPUTER_PHONE_DELAY's_ value to the delay in seconds between your computer's time and your phone's time.
 * In [main.py](https://github.com/OmerLibai/automatic-whatsapp-messages/blob/master/main.py) change _CHROME_PROFILE_PATH's_ value to the chrome profile you want to open.
 
+Of course, it's much more simple just writing the parameters through the command line, which of course you can do.
+The first parameter is the target time, the second is your message and the third is the contact's/group's name.
+
 ### using a profile
 
 _note: it is recommended to make a chrome profile specifically for this program's use as when the program ends, it closes all chrome tabs of the profile._
